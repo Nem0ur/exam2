@@ -1,0 +1,324 @@
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+.leftmenu{
+    height: 100%;
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+}
+
+.head1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 25px;
+    margin-top: 8%;
+    margin-bottom: 24px;
+}
+
+
+.Logo{
+    margin-top: 2%;
+    width: 32px;
+    height: 32px;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.var{
+color: var(--Primary-Dark-Gray, #354153);
+/* 24-32, Subheader/Semi Bold */
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 133.333% */
+margin-left: 9px;
+}
+
+.downmenu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.downmenu p {
+color: var(--Primary-Gray, #667085);
+/* 14-20, Text S/Regular */
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+margin-bottom: 25px;
+margin-left: 25px;
+}
+
+
+.allfiles {
+    display: flex;
+    flex-direction: row;
+}
+
+.allfiles p {
+color: var(--Primary-Black, #0D1421);
+/* 16-24, Text M/Medium */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+.user {
+width: 24px;
+height: 24px;
+}
+
+.favorite {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.favorite p {
+color: var(--Primary-Dark-Gray, #354153);
+/* 16-24, Text M/Medium */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+.star {
+width: 24px;
+height: 24px;
+}
+
+.trash {
+    display: flex;
+    flex-direction: row;
+}
+
+.trash p {
+color: var(--Primary-Dark-Gray, #354153);
+/* 16-24, Text M/Medium */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+.trashs {
+width: 24px;
+height: 24px;
+}
+
+.footer{
+    margin-top: 220%;
+}
+
+
+.head p{
+    color: var(--Primary-Black, #0D1421);
+    /* 30-40, Headline/Semi Bold */
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 133.333% */
+}
+
+#sortSelect{
+    position: absolute;
+    margin-left: 60%;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: var(--Primary-White, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    border: none; /* Убираем обводку у кнопок */
+    cursor: pointer; /* Добавляем стиль указателя при наведении */
+}
+
+
+.head{
+    display: flex;
+    margin-top: 1%;
+}
+
+.mainscreen{
+    display: flex;
+    flex-direction: column;
+}
+
+#fileContainer {
+    display: flex;
+    margin-top:40px;
+    flex-wrap: wrap; /* Устанавливаем flex-wrap: wrap, чтобы карточки переносились на новую строку */
+    gap: 32px;
+    
+    margin-right: 10%;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    
+}
+
+.filter-btn {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: var(--Primary-White, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    border: none; /* Убираем обводку у кнопок */
+    cursor: pointer; /* Добавляем стиль указателя при наведении */
+  }
+  
+  /* Дополнительные стили при наведении, если нужны */
+  .filter-btn:hover {
+    background: var(--Primary-Light-Gray, #E5E5E5);
+  }
+  
+
+
+/* Применяется к общему контейнеру карточки */
+.file-card {
+    display: flex;
+  }
+  
+  .file-image {
+    margin-right: 10px;
+  }
+  
+  .file-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .file-card p {
+color: var(--Primary-Gray, #667085);
+/* 14-20, Text S/Regular */
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+  }
+  
+.file-name {
+color: var(--Primary-Black, #0D1421);
+/* 18-28, Text L/Medium */
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 155.556% */
+}
+
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes preloader-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+      </div>
+    <header>
+
+    </header>
+    <main>
+        <div class="leftmenu">
+            <div class="head1">
+                <img src="/img/Logo.jpg" alt="Изображение 1" class="Logo"> 
+                <p class="var">Вариант 8</p>
+            </div>
+            <div class="downmenu">
+                <p class="search">Поиск</p>
+                <div class="allfiles">
+                    <img src="/img/user-01.svg" alt="Изображение 1" class="user">
+                    <p>Все файлы</p> 
+                </div>
+                <div class="favorite">
+                    <img src="/img/star-01.svg" alt="Изображение 1" class="star">
+                    <p>Избранное</p>
+                </div>
+                <div class="trash">
+                    <img src="/img/trash-01.svg" alt="Изображение 1" class="trashs">
+                    <p>Корзина</p> 
+                </div>
+                <div class="footer">
+                    <p>Вариант 8<br>Дьяков Дмитрий<br>Группа АС-21-1</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="mainscreen">
+            <div class="head">
+                <p>Ваши файлы</p>
+                <select id="sortSelect">
+                <option value="default">По умолчанию</option>
+                <option value="newest">Сначала новые</option>
+                <option value="oldest">Сначала старые</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button class="filter-btn" data-type="all">Все типы</button>
+                <button class="filter-btn" data-type="pdf">PDF</button>
+                <button class="filter-btn" data-type="doc">DOC</button>
+                <button class="filter-btn" data-type="xls">XLS</button>
+                <button class="filter-btn" data-type="png">PNG</button>
+            </div>
+            <div id="fileContainer"></div>
+        </div>    
+    </main>
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded_hiding');
+          window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+          }, 3000);
+        }
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>
